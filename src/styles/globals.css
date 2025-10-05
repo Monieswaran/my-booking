@@ -1,0 +1,23 @@
+:root {
+  --color-primary: #003bd3;
+  --color-primary-text: #ffffff;
+
+  --color-bg: #fff6ef;
+  --color-card: #ffffff;
+
+  --color-text: #0b1222;
+  --color-muted: #55607a;
+
+  --color-accent: #ffd9c9;
+
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+
+  --color-border: rgba(6, 28, 77, 0.08);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
