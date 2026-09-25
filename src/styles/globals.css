@@ -1,23 +1,61 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-sans/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
 :root {
-  --color-primary: #003bd3;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Ink and paper */
+  --color-bg: #f5f5f1;
+  --color-card: #ffffff;
+  --color-surface: #ececE6;
+  --color-text: #15181d;
+  --color-muted: #6b6f76;
+  --color-border: rgba(21, 24, 29, 0.14);
+
+  /* Signal navy - the single structural color */
+  --color-primary: #1f3a5c;
   --color-primary-text: #ffffff;
 
-  --color-bg: #fff6ef;
-  --color-card: #ffffff;
+  /* Departure-board amber - the single warm accent, used sparingly */
+  --color-accent: #c1731f;
+  --color-accent-strong: #a65e17;
+  --color-accent-soft: #f1e3d2;
+  --color-accent-text: #fff8f0;
 
-  --color-text: #0b1222;
-  --color-muted: #55607a;
+  --color-success: #3a7d5c;
+  --color-warning: #b8862e;
+  --color-danger: #b23a32;
+}
 
-  --color-accent: #ffd9c9;
+* {
+  box-sizing: border-box;
+}
 
-  --color-success: #16a34a;
-  --color-warning: #f59e0b;
-  --color-danger: #dc2626;
-
-  --color-border: rgba(6, 28, 77, 0.08);
+html {
+  font-family: var(--font-sans);
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
